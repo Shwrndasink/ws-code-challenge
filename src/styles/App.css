@@ -1,0 +1,142 @@
+html {
+  font-size: 10px; }
+
+.app {
+  margin: 0 auto;
+  max-width: 1200px; }
+
+/* Items not-selectable (they won't highlight) */
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome and Opera */ }
+
+/* Generic display classes */
+.hidden {
+  display: none; }
+
+.visible {
+  display: block; }
+
+/* Unordered list of product tiles to be displayed in a grid */
+ul.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0; }
+  ul.product-list li {
+    box-sizing: border-box;
+    flex: 1 1 33.3%;
+    list-style-type: none;
+    max-width: 33.3%;
+    padding: 1rem; }
+    ul.product-list li .item-wrapper {
+      overflow: hidden;
+      position: relative; }
+    ul.product-list li .item-image {
+      width: 100%; }
+    ul.product-list li .item-name {
+      background: rgba(255, 255, 255, 0.8);
+      color: #444;
+      font-size: 1.2rem;
+      height: 2rem;
+      left: 0;
+      line-height: 2rem;
+      padding: 0.8rem;
+      position: absolute;
+      text-transform: uppercase;
+      top: 0;
+      width: 100%; }
+    ul.product-list li .item-price {
+      background: rgba(0, 0, 0, 0.6);
+      bottom: 6rem;
+      color: white;
+      font-size: 1.4rem;
+      left: 1rem;
+      padding: 0.4rem;
+      position: absolute;
+      width: auto; }
+    ul.product-list li .slide-close {
+      font-size: 2.5rem;
+      position: absolute;
+      right: 1.5rem;
+      top: 1.25rem;
+      z-index: 20; }
+      ul.product-list li .slide-close:hover {
+        cursor: pointer; }
+
+/* Wrapper for the product slide */
+.slide-wrapper {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10; }
+  .slide-wrapper .slide-image-container .slide-image {
+    display: flex;
+    flex: 0 1 auto;
+    float: left;
+    width: 100%; }
+
+/* Slide Navigation styles */
+.slide-nav {
+  background: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  color: white;
+  display: flex;
+  height: 3.5rem;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 10; }
+  .slide-nav .slide-dot-wrapper {
+    display: flex;
+    padding-top: 1rem;
+    max-width: 50%; }
+  .slide-nav .slide-nav-dot {
+    border: 1px solid #ffffff;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+    margin: 0.5rem;
+    width: 0.5rem; }
+    .slide-nav .slide-nav-dot.fill {
+      background: #ffffff; }
+
+/* Controls close and the directional arrows styles on product slides */
+.slide-controls-wrapper .slide-arrow {
+  border-radius: 4rem;
+  box-sizing: border-box;
+  font-size: 2rem;
+  height: 4rem;
+  line-height: 4rem;
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  z-index: 20;
+  width: 4rem; }
+  .slide-controls-wrapper .slide-arrow:hover {
+    background: rgba(255, 255, 255, 0.6);
+    cursor: pointer; }
+  .slide-controls-wrapper .slide-arrow.left {
+    left: 0.25rem; }
+  .slide-controls-wrapper .slide-arrow.right {
+    right: 0.25rem; }
+
+@media screen and (max-width: 520px) {
+  ul.product-list li {
+    flex: 1 1 100%;
+    max-width: 100%; } }
+
+@media screen and (min-width: 521px) and (max-width: 992px) {
+  ul.product-list li {
+    flex: 1 1 50%;
+    max-width: 50%; } }
